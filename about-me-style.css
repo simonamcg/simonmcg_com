@@ -1,0 +1,297 @@
+/* ------------ Declarations -------------*/
+@media only screen 
+and (max-device-width: 480px) {
+  .body{-webkit-text-size-adjust: 100%;}
+}
+html{
+  overflow: hidden;
+}
+body {
+  margin:0;  
+  background-image:linear-gradient(30deg,rgb(78, 82, 138),rgb(216, 176, 255));
+  background-size:cover;
+  z-index:-20;
+  min-width:100vw;
+  min-height: 100vh;
+  -webkit-text-size-adjust: 100%;
+}
+
+
+
+
+
+/* ------------ Topbar -------------*/
+.topbar {
+
+  font-family: "Komet", sans-serif;
+  padding-bottom: 1.5rem;
+  padding-top:1.5rem;
+  padding-left:1.5rem;
+  top: 0;
+  right: 0;   
+  left: 0;
+  position:sticky;
+  background-image: linear-gradient(60deg,rgb(26, 26, 26), rgba(21, 21, 21, 0.9));
+  z-index: 100;
+  box-shadow: 0 0 30px black;
+  backdrop-filter: blur(6px);
+  max-height: 3vw;
+}
+
+
+
+
+/* logo */
+.topbar .img img{
+  right:0;
+  animation-name: spin;
+  animation-duration: 7s;
+  animation-iteration-count: infinite;
+  box-shadow: 0px 0px 10px white;
+  border-radius:5vw;
+}
+.topbar .img{
+  position:absolute;
+  top:.5vw;
+  right:1vw;
+  padding:1vw;
+  z-index:top;
+  animation-name:dropin;
+  animation-duration: 1s;
+  animation-delay: 0ms;
+  float:right;
+}
+
+
+
+
+/* site title */
+.titlecontainer{
+  padding-right:1rem;
+  padding-top:0rem;
+  padding-bottom: 0rem;
+  padding-left:2rem;
+  
+}
+.topbar .title {
+  position:relative;
+  font-size:1.2vw;
+  font-weight:bold;
+  line-height:.5rem;
+  padding-left:2vw;
+  padding-right:3vw;
+  animation-name:dropin;
+  animation-duration: 1s;
+  animation-delay: 0ms;
+}
+
+
+
+
+/* menu links */
+.linkscontainer {
+  position: relative;
+  bottom: 0rem;
+  left: 0rem;  
+  margin-left: -1vw;
+  padding-right: 4vw;
+  white-space:normal;
+  overflow:hidden;
+  font-family: "Komet",sans-serif;
+  font-weight: 800;
+  overflow: visible;
+  
+}
+.links{
+  position:relative;
+  display:inline-block;
+  font-size:1.3vw;
+  padding-left:1rem;
+  padding-right:1vw;
+  padding-top:0rem;
+  padding-bottom:0rem;
+  border-radius:1rem;
+  overflow: visible;
+  font-weight: 800;
+  bottom:.6vw;
+}
+
+
+
+/* menu link animations */
+.topbar a#a{
+  animation-name:dropin;
+  animation-duration: 1s;
+  animation-delay: 100ms;
+}
+.topbar a#b{
+  animation-name:dropin;
+  animation-duration: 1s;
+  animation-delay: 130ms;
+}
+.topbar a#c{
+  animation-name:dropin;
+  animation-duration: 1s;
+  animation-delay: 120ms;
+}
+.topbar a#d{
+  animation-name:dropin;
+  animation-duration: 1s;
+  animation-delay: 100ms;
+}
+.topbar a#e{
+  animation-name:dropin;
+  animation-duration: 1s;
+  animation-delay: 110ms;
+}
+
+
+
+
+/* -------------------------------------- Main Body --------------------------------*/
+.main{
+  top:-200px;
+  width:100vw;
+}
+
+
+/* ------------ Clouds -------------*/
+.bg{position: absolute;}
+.cloud1{width:10vw; position:absolute; animation:crawl 500s linear ; left:6vw; top:28vw;}
+.cloud2{width:16vw; position:absolute; animation:crawl 500s linear ; left:70vw; top:16vw}
+.cloud3{width:12vw; position:absolute; animation:crawl 500s linear ; left:30vw; top:1vw;}
+.cloud4{width:16vw; position:absolute; animation:crawl 700s linear ; left:80vw; top:12vw;}
+
+
+/* ------------ About Me Box -------------*/
+
+.box1{
+  position:relative;
+  margin-left:35vw;;
+  margin-top: 9vw;
+  height: fit-content;
+  width:fit-content;
+  background-color: white;
+  border-radius: 3vw;
+  box-shadow: 0 0 30px white;
+  padding: 3vw;
+  animation:baf 40s reverse infinite;
+}
+.box1 h1{
+  position:relative;
+  font-family: "komet",sans-serif;
+  width: fit-content;
+  text-align: left;
+  font-size: 3.5vw;
+  line-height: 1vw;
+  padding:0;
+  font-weight:900;
+}
+.box1 p{
+  font-family: "komet",sans-serif;
+  position:relative;
+  width: fit-content;
+  text-align: left;
+  top:1vw;
+  font-size: 1.5vw;
+  line-height: 2vw;
+  padding:0;
+  font-weight:700;
+}
+
+.secondimage{
+  position:absolute;
+  left: 10vw;
+  top:12vw;
+  scale:.7;
+}
+.secondimage img{
+  display:inline-block;
+  position:absolute;
+  object-fit:Cover;
+  width:30vw;
+  height:40vw;
+  border-radius: 3vw;
+  box-shadow: 0 0 30px rgb(102, 102, 102);
+  animation:baf 80s infinite; 
+}
+
+/* -------------------------- Footer -------------------------------*/
+.footer{
+  overflow: hidden;
+  width:100vw;
+  padding-top: 10rem;
+  padding-bottom: 4rem;
+}
+.footer a{
+  padding-left: 10%;
+  color:white;
+  font-weight: 800;
+  text-decoration: wavy;
+  font-family: "komet",sans-serif;
+}
+
+
+/* ------------ Hover Actions -------------*/
+
+.topbar a:link { text-decoration: none;}
+.topbar a:visited { text-decoration: none; }
+.topbar a:hover { text-decoration:none;text-shadow: 0px 0px 20px #ffadad;top:-.8vw;}
+.topbar a:active { text-decoration: none; }
+.topbar .img:hover{ transform: scale(1.01);}
+.topbar h1 {color:white;}  
+.topbar p {color:white;}
+.topbar a {color:white;overflow: visible;}
+
+
+/* ------------ Animations -------------*/
+@keyframes inleft{
+  0% {left:1%;bottom:10px;opacity:100}
+  100% {left:0%;bottom:0px; opacity:100}
+}
+@keyframes moveleft{
+  0% {left:0vw;}
+  100% {left:10vw;}
+}
+@keyframes inleft2{
+  0% {left:0%;opacity:00}
+  100% {left:0%;opacity:100}
+}
+@keyframes inleft3{
+  0% {left:0%;opacity:00}
+  100% {left:0%; opacity:100}
+}
+@keyframes fadein{
+  0% {opacity: 0;}
+}
+
+@keyframes spin{
+  0%{transform:rotate(0deg)}
+  5%{transform:rotate(-20deg);right:8px;}
+  10%{transform:rotate(380deg);right:-8px}
+  15%{transform:rotate(360deg);right:0;}
+  100%{transform:rotate(360deg)}
+}
+@keyframes dropin{
+  0%{top:-3vw;}
+  30%{top:.5vw;}
+  100%{top:0vw;}
+}
+@keyframes crawl{
+  0%{transform:translate(0,0vw);opacity:0}
+  .5%{opacity: 80%;}
+  100%{transform:translate(200vw,0vw);opacity: 60;}
+}
+@keyframes baf{
+  0%{
+    transform:rotate(0deg)
+              translate(-1vw)
+              rotate(0deg);
+  
+  }
+  100%{
+    transform:rotate(360deg)
+              translate(-1vw)
+              rotate(-360deg);
+  }
+}

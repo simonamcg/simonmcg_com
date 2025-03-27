@@ -1,0 +1,663 @@
+
+@keyframes inleft{
+  0% {left:1%;bottom:10px;opacity:100}
+  100% {left:0%;bottom:0px; opacity:100}
+}
+@keyframes moveleft{
+  0% {left:0vw;}
+  100% {left:10vw;}
+}
+@keyframes inleft2{
+  0% {left:22%;opacity:100}
+  100% {left:0%;opacity:100}
+}
+@keyframes inleft3{
+  0% {left:22%;opacity:100}
+  100% {left:0%; opacity:100}
+}
+@keyframes fadein{
+  0% {opacity: 0;}
+}@keyframes fadeout{
+  0% {opacity: 100%;translate:0vw;}
+  100% {opacity: 100%;translate:0 -120vh;}
+}
+@keyframes updiag{
+  0%{top:5vw;left:79.5vw;-webkit-transform: scale(0);}
+}
+@keyframes spin{
+  0%{transform:rotate(0deg)}
+  5%{transform:rotate(-20deg);right:8px;}
+  10%{transform:rotate(380deg);right:-8px}
+  15%{transform:rotate(360deg);right:0;}
+  100%{transform:rotate(360deg)}
+}
+@keyframes spin2{
+  0%{transform:rotate(0deg)}
+  25%{transform:rotate(-20deg);}
+  50%{transform:rotate(380deg);}
+  75%{transform:rotate(360deg);}
+  100%{transform:rotate(360deg)}
+}
+@keyframes dropin{
+  0%{top:-3vw;}
+  30%{top:.5vw;}
+  100%{top:0vw;}
+}
+@keyframes load1{
+  0%{transform:translateY(-5vw);}
+  25%{transform:translateY(-3vw);}
+  30%{transform:scale(2);}
+  40%{transform:translateY(3vw);}
+  50%{transform:translateY(5vw);z-index: 1001;}
+  60%{transform:translateY(3vw);}
+  70%{transform:scale(2);}
+  75%{transform:translateY(-3vw);}
+  100%{transform:translateY(-5vw);}
+}
+@keyframes load2{
+  0%{transform:translatex(-5vw);}
+  25%{transform:translatex(-3vw);}
+  30%{transform:scale(2);}
+  40%{transform:translatex(3vw);}
+  50%{transform:translatex(5vw);z-index: 1001;}
+  60%{transform:translatex(3vw);}
+  70%{transform:scale(2);}
+  75%{transform:translatex(-3vw);}
+  100%{transform:translatex(-5vw);}
+}
+@keyframes load3{
+  0%{transform:translatex(5vw);}
+  25%{transform:translatex(3vw);}
+  30%{transform:scale(2);}
+  40%{transform:translatex(-3vw);}
+  50%{transform:translatex(-5vw);z-index: 1001;}
+  60%{transform:translatex(-3vw);}
+  70%{transform:scale(2);}
+  75%{transform:translatex(3vw);}
+  100%{transform:translatex(5vw);}
+}
+@keyframes load4{
+  0%{transform:translateY(5vw);}
+  25%{transform:translateY(3vw);}
+  30%{transform:scale(2);}
+  40%{transform:translateY(-3vw);}
+  50%{transform:translateY(-5vw);z-index: 1001;}
+  60%{transform:translateY(-3vw);}
+  70%{transform:scale(2);}
+  75%{transform:translateY(3vw);}
+  100%{transform:translateY(5vw);}
+}
+@keyframes coinspin{
+  0%{}
+  50%{transform: scaleX(0);}
+}
+@keyframes wiggle {
+  10%, 90% {
+    transform: translate3d(-1px, 1px, 0);
+  }
+
+  20%, 80% {
+    transform: translate3d(1px,-1px, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-1px, 01px, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(1px, 0, 0);
+  }
+}
+@keyframes lookout{
+  0%{transform:translate(0,-60vw)}
+  70%{transform:translate(0,1vw)}
+  100%{transform:translate(0vw);}
+}
+@keyframes putup{
+  0%{transform:translateY(14vw)}
+  100%{}
+}
+@keyframes crawl{
+  0%{transform:translate(0,0vw);opacity:0}
+  .5%{opacity: 80%;}
+  100%{transform:translate(200vw,0vw);opacity: 60;}
+}
+@keyframes baf{
+  0%{
+    transform:rotate(0deg)
+              translate(-1vw)
+              rotate(0deg);
+  
+  }
+  100%{
+    transform:rotate(360deg)
+              translate(-1vw)
+              rotate(-360deg);
+  }
+}
+html{
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+body {
+  margin:0;  
+  background-image:linear-gradient(30deg,rgb(216, 176, 255),rgb(216, 176, 255));
+  background-size:cover;
+  z-index:-20;
+  overflow-y: hidden;
+  max-height: fit-content;
+  min-width:100vw;
+  -webkit-text-size-adjust: 100%;
+
+}
+.loader{position:fixed;width: 100%;height:100%;
+  background-color: rgba(0, 0, 0, 0.9);z-index: 1000;box-shadow: 0 0 90vw black;
+   backdrop-filter: blur(100px);
+}
+#loadbar1{
+  position:absolute; width:1vw;height:1vw; border-radius: .5vw; 
+  background-color: orange;left:49.5vw;top:25vw;
+  animation:load1 1s 50ms linear infinite; z-index: 1003;
+}
+#loadbar2{
+  position:absolute; width:1vw;height:1vw; border-radius: .5vw; 
+  background-color: yellow;left:49.5vw;top:25vw;
+  animation:load2 1s 100ms linear infinite; z-index: 1003;
+}
+#loadbar3{
+  position:absolute; width:1vw;height:1vw; border-radius: .5vw; 
+  background-color: magenta;left:49.5vw;top:25vw;
+  animation:load3 1s 200ms linear infinite; z-index: 1003;
+}
+#loadbar4{
+  position:absolute; width:1vw;height:1vw; border-radius: .5vw; 
+  background-color: white;left:49.5vw;top:25vw;
+  animation:load4 1s 150ms linear infinite; z-index: 1003;
+}
+#loadbar5{
+  position:absolute; width:3vw;height:3vw; border-radius: 3vw; 
+  background-color: white;left:48.5vw;top:24vw; scale:2;
+  animation:coinspin .5s 150ms ease-in-out infinite; z-index: 1002;
+}
+.loader .logo{position:absolute;left:45.5vw;top:20vw;right:45.5vw;bottom:20vw;
+  width:9vw;height:9vw;animation:spin2 2s infinite;
+  box-shadow: 0 0 30px black;border-radius: 50vw;display: none;
+}
+
+.topbar {
+
+  font-family: "Komet", sans-serif;
+  padding-bottom: 1.5rem;
+  padding-top:1.5rem;
+  padding-left:1.5rem;
+  top: 0;
+  right: 0;   
+  left: 0;
+  position: sticky;
+  background-image: linear-gradient(30deg,rgb(216, 176, 255),rgb(216, 176, 255));
+  z-index: 100;
+  /*box-shadow: 0 0 30px black;*/
+  backdrop-filter: blur(6px);
+  max-height: 3vw;
+  overflow: none;
+}
+
+.topbar .img img{
+  right:0;
+  animation-name: spin;
+  animation-duration: 7s;
+  animation-iteration-count: infinite;
+  box-shadow: 0px 0px 10px white;
+  border-radius:5vw;
+  width:4vw;
+  height:4vw;
+  min-width:30px;
+  min-height:30px;
+}
+.topbar .img{
+  position:absolute;
+  top:.5vw;
+  right:2vw;
+  padding:1vw;
+  z-index:top;
+  animation-name:dropin;
+  animation-duration: 1s;
+  animation-delay: 0ms;
+  float:right;
+  width:3vw;
+  min-width:30px;
+}
+
+
+
+.titlecontainer{
+  padding-right:1rem;
+  padding-top:0rem;
+  padding-bottom: 0rem;
+  padding-left:2rem;
+  
+}
+.topbar .title {
+  position:relative;
+  font-size:1.2vw;
+  font-weight:bold;
+  line-height:.5rem;
+  padding-left:2vw;
+  padding-right:3vw;
+  animation-name:dropin;
+  animation-duration: 1s;
+  animation-delay: 0ms;
+}
+
+
+.linkscontainer {
+  position: relative;
+  bottom: 0rem;
+  left: 0rem;  
+  margin-left: -1vw;
+  padding-right: 4vw;
+  white-space:normal;
+  overflow:hidden;
+  font-family: "Komet",sans-serif;
+  font-weight: 800;
+  overflow: visible;
+  
+}
+.links{
+  position:relative;
+  display:inline-block;
+  font-size:1.3vw;
+  padding-left:1rem;
+  padding-right:1vw;
+  padding-top:0rem;
+  padding-bottom:0rem;
+  border-radius:1rem;
+  overflow: visible;
+  font-weight: 800;
+  bottom:.6vw;
+}
+
+.main{
+  top:-200px;
+  width:100vw;
+}
+.headliner{
+  position:relative;
+  margin-bottom:16vw;
+}
+.headliner p{
+  color:white;
+  font-family: "komet",sans-serif;
+  font-weight: 800;
+  font-size: 7vw;
+  text-shadow:0 0 10px white;
+  padding-left:5vw;
+  padding-top:-10vw;
+}
+.headliner img{
+  position:relative;
+}
+.headliner div{
+  position: absolute;
+}
+.arrow{
+  display:none;
+  position:absolute;
+  width:6vw;
+  left:90vw;
+  top:-8vw;
+}
+.eye11{
+  animation: lookout 1s 60ms;
+  left:74vw;
+  top:-3vw;
+  width:6vw;
+  animation-play-state: paused;
+}
+.eye22{
+  animation: lookout 1s 80ms;
+  left: 68.5vw;
+  top:7vw;
+  width:6vw;
+  animation-play-state: paused;
+}
+.eye33{
+  animation: lookout 1s 5ms;
+  left: 61vw;
+  top:1vw;
+  width:6vw;
+  animation-play-state: paused;
+}
+.umb11{
+  left: 42.5vw;
+  top:20vw;
+  width: 30vw;
+  rotate:0deg;
+  animation: putup 1s;
+  animation-play-state: paused;
+}
+.eye1{animation: wiggle 3s ease-in-out 730ms infinite;width:6vw;}
+.eye2{animation: wiggle 3s ease-in-out 15ms infinite;width:4vw;}
+.eye3{animation: wiggle 3s ease-in-out 400ms infinite;width:5vw;}
+.umb{width: 50vw;}
+.bg{position: relative;height:0;}
+.cloud1{width:10vw; position:absolute; animation:crawl 500s linear ; left:6vw; top:28vw;}
+.cloud2{width:16vw; position:absolute; animation:crawl 500s linear ; left:70vw; top:16vw}
+.cloud3{width:12vw; position:absolute; animation:crawl 500s linear ; left:30vw; top:1vw;}
+.cloud4{width:16vw; position:absolute; animation:crawl 700s linear ; left:80vw; top:12vw;}
+.cloud5{width:16vw; position:absolute; animation:crawl 500s linear ; left:30vw; top:40vw;}
+.cloud6{width:10vw; position:absolute; animation:crawl 200s linear ; left:30vw; top:55vw}
+.cloud7{width:14vw; position:absolute; animation:crawl 200s linear ; left:23vw; top:70vw;}
+.cloud8{width:10vw; position:absolute; animation:crawl 200s linear ; left:65vw; top:95vw;}
+.cloud9{width:16vw; position:absolute; animation:crawl 200s linear ; left:30vw; top:177.5vw;}
+.cloud10{width:16vw; position:absolute; animation:crawl 200s linear ; left:70vw; top:130vw}
+.cloud11{width:12vw; position:absolute; animation:crawl 200s linear ; left:14vw; top:140vw;}
+.cloud12{width:16vw; position:absolute; animation:crawl 200s linear ; left:0; top:108vw;}
+
+.project4{
+  position:relative;
+  height:28vw;
+  margin-top:10vw;
+}
+.project1{
+  position:relative;
+  height:28vw;
+  top:10vw;
+}
+.project2{
+  position:relative;
+  height:28vw;
+  margin-top:19vw;
+}
+.project3{
+  position:relative;
+  height:37vw;
+  margin-top: -3vw;
+  left:-2.8vw;
+  width:100vw;
+}
+
+.introvideo{
+  position:absolute;
+  left:40%;
+  top:4vw;
+  width:45vw;
+  animation:baf 50s reverse infinite; 
+}
+.introvideo video{
+  position:absolute;
+  width:100%;
+  border-radius: 3vw;
+  animation-name: fadein;
+  animation-duration: 1s;
+  box-shadow: 0 0 30px rgb(255, 255, 255);
+}
+
+
+
+.secondvideo{
+  position:absolute;
+  width:50%;
+  left:12%;
+  animation:baf 50s 1s infinite; 
+}
+.secondvideo video{
+  display:inline-block;
+  position:relative;
+  width:100%;
+  animation-timing-function: cubic-bezier();
+  border-radius: 3vw;
+  animation-name: fadein;
+  animation-duration: 1s;
+  box-shadow: 0 0 30px rgb(255, 255, 255);
+}
+.secondvideo img{
+  display:inline-block;
+  position:absolute;
+  object-fit:Cover;
+  width:20vw;
+  height:20vw;
+  border-radius: 3vw;
+  z-index:30;
+  box-shadow: 0 0 30px white;
+  animation:baf 10s infinite; 
+}
+.secondimage{
+  position:absolute;
+  left: 65vw;
+  z-index:30;
+  
+}
+.secondimage img{
+  display:inline-block;
+  position:absolute;
+  object-fit:Cover;
+  width:20vw;
+  height:20vw;
+  border-radius: 3vw;
+  box-shadow: 0 0 30px rgb(102, 102, 102);
+  animation:baf 50s infinite; 
+}
+.firstbox{
+  display:absolute;
+  animation:baf 50s infinite; 
+}
+.secondbox{
+  position:absolute;
+  left:55vw;
+  margin-top:-5vw;
+  width:40vw;
+  z-index: 50;
+  animation:baf 50s infinite; 
+}
+.thirdbox{
+  position:absolute;
+  margin-left:40%;
+  margin-top:0px;
+  height:20vw;
+  width:50%;
+  animation:baf 50s infinite; 
+}
+.fourthbox{
+  position:absolute;
+  margin-left:12vw;
+  margin-top:0px;
+  height:22vw;
+  width:85vw;
+  animation:baf 50s infinite; 
+}
+
+
+
+.box1{
+  position:absolute;
+  margin-left:15vw;
+  margin-top:9vw;
+  height: 15vw;
+  width:40vw;
+  background-color: white;
+  animation-name: inleft2;
+  animation-duration: 1s;
+  border-radius: 3vw;
+  box-shadow: 0 0 30px white;
+  font-family: "komet",sans-serif;
+  padding-left:5vw;
+  overflow: hidden;
+  font-weight: 700;
+}
+.box2{
+  z-index:2;
+  position:absolute;
+  margin-left:00%;
+  margin-top:00%;
+  height:20vw;
+  width:36vw;
+  background-color: white;
+  border-radius: 3vw;
+  box-shadow: 0 0 30px rgb(255, 255, 255);
+  font-family: "komet",sans-serif;
+  overflow: hidden;
+  font-weight: 700;
+  padding-left:5vw;
+  padding-top: 3vw;
+}
+.box3{
+  z-index:2;
+  position:absolute;
+  margin-left:00%;
+  margin-top:00%;
+  height:20vw;
+  width:85%;
+  background-color: white;
+  border-radius: 3vw;
+  box-shadow: 0 0 30px rgb(255, 255, 255);
+  font-family: "komet",sans-serif;
+  overflow: hidden;
+  font-weight: 700;
+  padding-left:5vw;
+  padding-top: 3vw;
+}
+.box4{
+  z-index:2;
+  position:absolute;
+  margin-left:00%;
+  margin-top:-2vw;
+  height:110%;
+  width:75vw;
+  background-color: white;
+  border-radius: 3vw;
+  box-shadow: 0 0 30px rgb(255, 255, 255);
+  font-family: "komet",sans-serif;
+  overflow: hidden;
+  font-weight: 700;
+  padding-left:5vw;
+  padding-top: 3vw;
+}
+
+.box1 p{
+  position:relative;
+  text-align: left;
+  font-size: 3.5vw;
+  line-height: 0vw;
+  margin-left:-1vw;
+  padding:0;
+  font-weight:900;
+}
+.box1 ul{
+  position:relative;
+  font-size: 1.3vw;
+  list-style: none;
+  margin-top:-1.5vw;
+  padding:0;
+  text-align: left;
+  font-family: "komet",sans-serif;
+  list-style-type: disc;
+}
+.box2 p#p21{
+  position:relative;
+  font-size: 3vw;
+  line-height: 0vw;
+  padding:0;
+  font-weight:900;
+}
+.box2 p{
+  position:relative;
+  font-size: 1.25vw;
+  list-style: none;
+  text-align: left;
+  padding:0;
+}
+.box2 a{
+  font-size: 1vw;
+  padding:0;
+}
+.box3 p#p31{
+  position:relative;
+  font-size: 3vw;
+  line-height: 0vw;
+  padding:0;
+  font-weight:900;
+}
+.box3 p{
+  position:relative;
+  font-size: 1.5vw;
+  list-style: none;
+  text-align: left;
+  padding:0;
+
+}
+.box3 a{
+  font-size: 1vw;
+  padding:0;
+}
+.box4 p#p41{
+  position:relative;
+  font-size: 3.3vw;
+  line-height: 0vw;
+  font-weight:900;
+  padding:0;
+}
+.box4 p{
+  position:relative;
+  font-size: 1.3vw;
+  list-style: none;
+  text-align: left;
+  padding:0;
+}
+.box4 a{
+  font-size: 1vw;
+  padding:0;
+}
+
+.footer{
+  overflow: hidden;
+  width:100vw;
+  padding-top: 10rem;
+  padding-bottom: 4rem;
+}
+.footer a{
+  padding-left: 10%;
+  color:white;
+  font-weight: 800;
+  text-decoration: wavy;
+  font-family: "komet",sans-serif;
+}
+
+
+
+.topbar a:link { text-decoration: none;}
+.topbar a:visited { text-decoration: none; }
+.topbar a:hover { text-decoration:none;text-shadow: 0px 0px 20px #ffadad;top:-.8vw;}
+.topbar a:active { text-decoration: none; }
+
+.topbar .img:hover{ transform: scale(1.01);}
+video:hover{transform: scale(1.01);}
+
+.topbar h1 {color:white;}  
+.topbar p {color:white;}
+.topbar a {color:white;overflow: visible;}
+.topbar a#a{
+  animation-name:dropin;
+  animation-duration: 1s;
+  animation-delay: 100ms;
+}
+.topbar a#b{
+  animation-name:dropin;
+  animation-duration: 1s;
+  animation-delay: 130ms;
+}
+.topbar a#c{
+  animation-name:dropin;
+  animation-duration: 1s;
+  animation-delay: 120ms;
+}
+.topbar a#d{
+  animation-name:dropin;
+  animation-duration: 1s;
+  animation-delay: 100ms;
+}
+.topbar a#e{
+  animation-name:dropin;
+  animation-duration: 1s;
+  animation-delay: 110ms;
+}
